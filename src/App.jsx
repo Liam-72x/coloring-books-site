@@ -59,7 +59,7 @@ export default function ColoringBooksSite() {
       {
         id: "divine-legends-1",
         title: "Divine Legends — Fact Book I",
-        blurb: "A compact, fact‑rich guide with clean layouts.",
+        blurb: "A compact, fact-rich guide with clean layouts.",
         tags: ["Facts", "Reference"],
         series: "Divine Legends (Fact Books)",
         release: "2025-07-01",
@@ -68,7 +68,8 @@ export default function ColoringBooksSite() {
       {
         id: "divine-legends-2",
         title: "Divine Legends — Fact Book II",
-        blurb: "Second volume of the fact series with concise, reader‑friendly pages.",
+        blurb:
+          "Second volume of the fact series with concise, reader-friendly pages.",
         tags: ["Facts", "Reference"],
         series: "Divine Legends (Fact Books)",
         release: "2025-07-01",
@@ -132,11 +133,11 @@ export default function ColoringBooksSite() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-              Cozy, Creative, & Kid‑Friendly Coloring Books
+              Cozy, Creative, & Kid-Friendly Coloring Books
             </h1>
             <p className="mt-4 text-lg text-neutral-600 max-w-prose">
               Relaxing, clean designs with proper margins and thoughtful themes — from the
-              <span className="font-semibold"> Cozy Collection</span> to high‑adventure tales in
+              <span className="font-semibold"> Cozy Collection</span> to high-adventure tales in
               <span className="font-semibold"> Color the Magic</span>.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -212,7 +213,7 @@ export default function ColoringBooksSite() {
                   <div className="text-center px-6">
                     <div className="text-sm uppercase tracking-wide text-neutral-500">{b.series}</div>
                     <h3 className="mt-1 text-lg font-extrabold leading-tight">{b.title}</h3>
-                    <p className="mt-2 text-sm text-neutral-600 line-clamp-3">{b.blurb}</p>
+                    <p className="mt-2 text-sm text-neutral-600">{b.blurb}</p>
                     <div className="mt-3 flex flex-wrap gap-2 justify-center">
                       {b.tags.map((t) => (
                         <span key={t} className="text-xs px-2 py-1 rounded-full bg-white border">
@@ -250,7 +251,7 @@ export default function ColoringBooksSite() {
           <div>
             <h2 className="text-2xl md:text-3xl font-extrabold">About</h2>
             <p className="mt-3 text-neutral-700 max-w-prose">
-              I create cozy, calming coloring books and kid‑friendly adventures. Pages are designed with clean margins, no cut‑offs, and high print readability.
+              I create cozy, calming coloring books and kid-friendly adventures. Pages are designed with clean margins, no cut-offs, and high print readability.
               Collections include the <span className="font-semibold">Cozy Collection</span> and
               <span className="font-semibold"> Color the Magic</span> series.
             </p>
@@ -261,7 +262,7 @@ export default function ColoringBooksSite() {
               </div>
               <div className="rounded-2xl border p-4">
                 <div className="text-3xl font-extrabold">A4</div>
-                <div className="text-sm text-neutral-600">Vertical, bleed‑safe layout</div>
+                <div className="text-sm text-neutral-600">Vertical, bleed-safe layout</div>
               </div>
             </div>
           </div>
@@ -282,9 +283,7 @@ export default function ColoringBooksSite() {
           <div className="grid md:grid-cols-5 gap-8 items-start">
             <div className="md:col-span-2">
               <h2 className="text-2xl md:text-3xl font-extrabold">Stay in the loop</h2>
-              <p className="mt-3 text-neutral-700 max-w-prose">
-                Get new releases in your inbox.
-              </p>
+              <p className="mt-3 text-neutral-700 max-w-prose">Get new releases in your inbox.</p>
             </div>
             <form className="md:col-span-3 grid sm:grid-cols-3 gap-3">
               <input className="px-3 py-2 border rounded-xl" placeholder="Name" aria-label="Name" />
@@ -315,3 +314,7 @@ export default function ColoringBooksSite() {
             <a className="hover:opacity-70" href="#terms">Terms</a>
           </nav>
         </div>
+      </footer>
+    </div>
+  );
+}
