@@ -1,10 +1,5 @@
 import React, { useMemo, useState } from "react";
 
-/**
- * Simple, single-file website for showcasing coloring books.
- * - Replace placeholder links ("#") with your live Amazon KDP URLs.
- * - Add real cover images by setting each book's `cover` to a URL.
- */
 export default function ColoringBooksSite() {
   const [query, setQuery] = useState("");
   const [collection, setCollection] = useState("all");
@@ -20,7 +15,7 @@ export default function ColoringBooksSite() {
         tags: ["Cozy Collection", "Homes", "Relaxing"],
         series: "Cozy Collection",
         release: "2025-06-27",
-        links: { amazon: "#"},
+        links: { amazon: "https://www.amazon.co.uk/dp/B0FHKV4NBK" },
       },
       {
         id: "cozy-kitchens",
@@ -29,17 +24,7 @@ export default function ColoringBooksSite() {
         tags: ["Cozy Collection", "Kitchens"],
         series: "Cozy Collection",
         release: "2025-07-12",
-        links: { amazon: "#"},
-      },
-      {
-        id: "animal-homes",
-        title: "The Cozy Collection: Cozy Animal Homes",
-        blurb:
-          "Whimsical burrows, treehouses, and woodland hideaways for animal friends.",
-        tags: ["Cozy Collection", "Animals"],
-        series: "Cozy Collection",
-        release: "2025-07-12",
-        links: { amazon: "#"},
+        links: { amazon: "https://www.amazon.co.uk/dp/B0FG2YWK9K" },
       },
       {
         id: "spoonful-of-color",
@@ -49,37 +34,7 @@ export default function ColoringBooksSite() {
         tags: ["Food", "Realistic", "A4"],
         series: "Standalone",
         release: "2025-07-01",
-        links: { amazon: "#"},
-      },
-      {
-        id: "alphabet",
-        title: "Color the Alphabet",
-        blurb:
-          "A-Z with oversized letters and a top-right object per page — clean margins, bleed-safe.",
-        tags: ["Educational", "A4", "Kids"],
-        series: "Standalone",
-        release: "2025-07-08",
-        links: { amazon: "#"},
-      },
-      {
-        id: "big-brother-baby-book",
-        title: "Big Brother Baby Book",
-        blurb:
-          "A keepsake in soft baby blues & pastels with interactive coloring pages for siblings.",
-        tags: ["Keepsake", "Baby"],
-        series: "Standalone",
-        release: "2025-07-08",
-        links: { amazon: "#"},
-      },
-      {
-        id: "from-miss-to-mrs",
-        title: "From Miss to Mrs — Wedding Planner",
-        blurb:
-          "Soft pastel floral borders on every page; the perfect all-in-one wedding planning hub.",
-        tags: ["Planner", "Wedding"],
-        series: "Standalone",
-        release: "2025-07-08",
-        links: { amazon: "#"},
+        links: { amazon: "https://www.amazon.co.uk/dp/B0FHPPQKCK" },
       },
       {
         id: "dinosaurs",
@@ -89,7 +44,7 @@ export default function ColoringBooksSite() {
         tags: ["Dinosaurs", "Adventure"],
         series: "Color the Magic",
         release: "2025-07-27",
-        links: { amazon: "#"},
+        links: { amazon: "https://www.amazon.co.uk/dp/B0FKH4S6ZP" },
       },
       {
         id: "tombs-and-treasures",
@@ -99,7 +54,25 @@ export default function ColoringBooksSite() {
         tags: ["Adventure", "Explorers"],
         series: "Color the Magic",
         release: "2025-07-27",
-        links: { amazon: "#"},
+        links: { amazon: "https://www.amazon.co.uk/dp/B0FGJX7BQH" },
+      },
+      {
+        id: "divine-legends-1",
+        title: "Divine Legends — Fact Book I",
+        blurb: "A compact, fact‑rich guide with clean layouts.",
+        tags: ["Facts", "Reference"],
+        series: "Divine Legends (Fact Books)",
+        release: "2025-07-01",
+        links: { amazon: "https://www.amazon.co.uk/dp/B0FGDQLSVN" },
+      },
+      {
+        id: "divine-legends-2",
+        title: "Divine Legends — Fact Book II",
+        blurb: "Second volume of the fact series with concise, reader‑friendly pages.",
+        tags: ["Facts", "Reference"],
+        series: "Divine Legends (Fact Books)",
+        release: "2025-07-01",
+        links: { amazon: "https://www.amazon.co.uk/dp/B0FG1S65GV" },
       },
     ],
     []
@@ -109,6 +82,7 @@ export default function ColoringBooksSite() {
     { value: "all", label: "All series" },
     { value: "Cozy Collection", label: "Cozy Collection" },
     { value: "Color the Magic", label: "Color the Magic" },
+    { value: "Divine Legends (Fact Books)", label: "Divine Legends" },
     { value: "Standalone", label: "Standalone" },
   ];
 
@@ -136,6 +110,7 @@ export default function ColoringBooksSite() {
 
   return (
     <div className="min-h-screen bg-white text-neutral-900">
+      {/* Nav */}
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
           <a href="#home" className="font-extrabold text-xl tracking-tight">
@@ -143,7 +118,6 @@ export default function ColoringBooksSite() {
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a className="hover:opacity-70" href="#books">Books</a>
-            <a className="hover:opacity-70" href="#freebies">Freebies</a>
             <a className="hover:opacity-70" href="#about">About</a>
             <a className="hover:opacity-70" href="#contact">Contact</a>
           </nav>
@@ -153,6 +127,7 @@ export default function ColoringBooksSite() {
         </div>
       </header>
 
+      {/* Hero */}
       <section id="home" className="relative isolate">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -166,18 +141,15 @@ export default function ColoringBooksSite() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="#books" className="px-4 py-2 rounded-xl bg-neutral-900 text-white font-semibold hover:opacity-90">Browse Books</a>
-              <a href="#freebies" className="px-4 py-2 rounded-xl border font-semibold hover:bg-neutral-50">Free Sample Pages</a>
+              <a href="#contact" className="px-4 py-2 rounded-xl border font-semibold hover:bg-neutral-50">Contact</a>
             </div>
             <div id="shop" className="mt-6 flex flex-wrap items-center gap-3 text-sm">
-              <span className="text-neutral-600">Also available on:</span>
-              <a href="#" className="underline hover:no-underline">Amazon KDP</a>
-              <span>•</span>
-              <a href="#" className="underline hover:no-underline">Etsy</a>
-              <span>•</span>
-              <a href="#" className="underline hover:no-underline">Redbubble</a>
+              <span className="text-neutral-600">Available on:</span>
+              <a href="#" className="underline hover:no-underline">Amazon</a>
             </div>
           </div>
 
+          {/* Decorative preview panel */}
           <div className="relative">
             <div className="aspect-[4/5] w-full rounded-3xl shadow-xl overflow-hidden bg-gradient-to-br from-neutral-100 to-neutral-200 flex items-center justify-center">
               <div className="grid grid-cols-3 gap-2 p-4 w-full">
@@ -193,6 +165,7 @@ export default function ColoringBooksSite() {
         </div>
       </section>
 
+      {/* Books */}
       <section className="border-t" id="books">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
           <div className="flex items-end flex-wrap gap-4">
@@ -231,6 +204,7 @@ export default function ColoringBooksSite() {
             </div>
           </div>
 
+          {/* Grid */}
           <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((b) => (
               <article key={b.id} className="group border rounded-3xl overflow-hidden hover:shadow-xl transition-shadow">
@@ -251,7 +225,7 @@ export default function ColoringBooksSite() {
                 <div className="p-4 flex items-center justify-between gap-2">
                   <div className="text-xs text-neutral-500">Released {new Date(b.release).toLocaleDateString()}</div>
                   <div className="flex items-center gap-2">
-                    <a className="text-sm font-semibold underline hover:no-underline" href={b.links.amazon}>
+                    <a className="text-sm font-semibold underline hover:no-underline" href={b.links.amazon} target="_blank" rel="noreferrer">
                       Amazon
                     </a>
                   </div>
@@ -260,56 +234,25 @@ export default function ColoringBooksSite() {
             ))}
           </div>
 
+          {/* CTA Bar */}
           <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-4 rounded-3xl border p-5">
             <p className="text-neutral-700">
-              Want your book featured at the top? <span className="font-semibold">Pin it</span> with a cover image and direct links.
+              Want your book featured at the top? <span className="font-semibold">Pin it</span> with a cover image and direct link.
             </p>
             <a href="#contact" className="px-4 py-2 rounded-xl bg-neutral-900 text-white font-semibold hover:opacity-90">Contact Me</a>
           </div>
         </div>
       </section>
 
-      <section id="freebies" className="border-t bg-neutral-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-extrabold">Free Sample Pages</h2>
-            <p className="mt-3 text-neutral-700 max-w-prose">
-              Try before you color! Download a handful of black‑and‑white, margin‑safe sample pages from a few titles.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#" className="px-4 py-2 rounded-xl bg-neutral-900 text-white font-semibold hover:opacity-90">Download PDF</a>
-              <a href="#" className="px-4 py-2 rounded-xl border font-semibold hover:bg-neutral-100">Teacher License</a>
-            </div>
-          </div>
-          <div className="rounded-3xl border bg-white p-6">
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center justify-between">
-                <span>Cozy Cottages — 3 pages</span>
-                <a href="#" className="underline hover:no-underline">Download</a>
-              </li>
-              <li className="flex items-center justify-between">
-                <span>Spoonful of Color — 3 pages</span>
-                <a href="#" className="underline hover:no-underline">Download</a>
-              </li>
-              <li className="flex items-center justify-between">
-                <span>Color the Alphabet — 2 pages</span>
-                <a href="#" className="underline hover:no-underline">Download</a>
-              </li>
-              <li className="flex items-center justify-between">
-                <span>Land of the Dinosaurs — 2 pages</span>
-                <a href="#" className="underline hover:no-underline">Download</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
+      {/* About */}
       <section id="about" className="border-t">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-2 gap-10 items-start">
           <div>
             <h2 className="text-2xl md:text-3xl font-extrabold">About</h2>
             <p className="mt-3 text-neutral-700 max-w-prose">
-              I create cozy, calming coloring books and kid‑friendly adventures.
+              I create cozy, calming coloring books and kid‑friendly adventures. Pages are designed with clean margins, no cut‑offs, and high print readability.
+              Collections include the <span className="font-semibold">Cozy Collection</span> and
+              <span className="font-semibold"> Color the Magic</span> series.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-3">
               <div className="rounded-2xl border p-4">
@@ -333,13 +276,14 @@ export default function ColoringBooksSite() {
         </div>
       </section>
 
+      {/* Contact */}
       <section id="contact" className="border-t bg-neutral-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid md:grid-cols-5 gap-8 items-start">
             <div className="md:col-span-2">
               <h2 className="text-2xl md:text-3xl font-extrabold">Stay in the loop</h2>
               <p className="mt-3 text-neutral-700 max-w-prose">
-                Get new releases, freebies, and teacher resources in your inbox.
+                Get new releases in your inbox.
               </p>
             </div>
             <form className="md:col-span-3 grid sm:grid-cols-3 gap-3">
@@ -362,6 +306,7 @@ export default function ColoringBooksSite() {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="border-t">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 text-sm flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© {new Date().getFullYear()} Color the Magic. All rights reserved.</p>
@@ -370,7 +315,3 @@ export default function ColoringBooksSite() {
             <a className="hover:opacity-70" href="#terms">Terms</a>
           </nav>
         </div>
-      </footer>
-    </div>
-  );
-}
